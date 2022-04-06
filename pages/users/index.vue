@@ -28,13 +28,26 @@
 //         const
 //     }
 // }
-import axios from 'axios'
 export default {
-  async asyncData(context){
-    const {data} = await context.$axios.get('/api/users')
+ data() {
     return {
-      users : data
+      messages: {
+        'notfound': 'Can not found an article',
+        'deleteerror': 'An error occurred while deleting article'
+      }
     }
   },
+  async asyncData({$axios}) {
+    const {data} = await $axios.get(`/api/users`)
+    return { users: data }
+    
+  },
+ // this is working
+//   async asyncData(context){
+//     const {data} = await context.$axios.get('/api/users')
+//     return {
+//       users : data
+//     }
+//   },
 }
 </script>

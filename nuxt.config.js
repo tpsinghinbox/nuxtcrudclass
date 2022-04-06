@@ -29,7 +29,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    //'bootstrap-vue/nuxt',
+    'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     //'@nuxtjs/auth',
