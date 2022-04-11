@@ -1,10 +1,13 @@
 const express = require('express')
 const app = express()
+const path = require('path')
 const db = require('./helpers/db')
+
 const indexRouter = require('./routes/')
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 
 
 // Require & Import API routes
